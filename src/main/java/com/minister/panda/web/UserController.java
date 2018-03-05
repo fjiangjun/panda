@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @ApiOperation(value="创建用户",notes="根据user对象创建用户")
-    @ApiImplicitParam(name = "user",value = "用户相信实体user", required = true,dataType = "User")
+    @ApiImplicitParam(name = "user",value = "用户详细实体user", required = true,dataType = "User")
     @RequestMapping(value="",method = RequestMethod.POST)
     public String postUser(@RequestBody User user){
         // 处理"/users/"的POST请求，用来创建User

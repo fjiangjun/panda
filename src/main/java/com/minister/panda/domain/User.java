@@ -4,6 +4,11 @@ package com.minister.panda.domain;/**
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * @author liqing
  * @fileName User.java
@@ -11,10 +16,23 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
  * @create 2018-03-01 23:51
  * @Description
  **/
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
     private Long id;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false)
     private Integer age;
+
+    public User(String name,Long id,Integer age){
+        this.name = name;
+        this.id = id;
+        this.age = age;
+    }
 
     public Long getId() {
         return id;

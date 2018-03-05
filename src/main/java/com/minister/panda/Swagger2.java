@@ -25,15 +25,15 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.minister.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.minister.panda.web"))
                 .paths(PathSelectors.any())
                 .build();
     }
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
                 .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("更多Spring Boot相关文章请关注：http://blog.didispace.com/")
-                .termsOfServiceUrl("http://blog.didispace.com/")
+                .description("更多Spring Boot相关文章请关注：http://www.shifen.com/")
+                .termsOfServiceUrl("http://www.baidu.com/")
                 .contact("minister")
                 .version("1.0")
                 .build();
